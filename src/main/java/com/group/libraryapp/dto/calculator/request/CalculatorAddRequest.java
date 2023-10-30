@@ -1,5 +1,5 @@
 package com.group.libraryapp.dto.calculator.request;
-
+// 테스트용 클래스
 public class CalculatorAddRequest {
     private final int number1;
     private final int number2;
