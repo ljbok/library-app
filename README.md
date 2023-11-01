@@ -138,6 +138,7 @@
 <br>
 
 ## 파일 설명
+```
 - Dto
   └─ request :사용자로 Body로 받을 객체
   └─ reponse : 사용자에게 JSON 타입으로 전달할 객체
@@ -151,4 +152,5 @@
   └─ JpaRepository를 상속받아 Service 또는 Entity로부터 매개변수를 전달받아 DB에 Data CRUD 작업을 수행할 Class
 - LibraryAppApplication.java
   └─ 서버 시작을 위해 실행될 Class
+```
 
