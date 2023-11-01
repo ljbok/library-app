@@ -140,9 +140,9 @@
 ## 파일 설명
 [Dto]
 - request
-  **사용자로 Body로 받을 객체**
+  --사용자로 Body로 받을 객체
 _ reponse
-  **사용자에게 JSON 타입으로 전달할 객체**
+  --사용자에게 JSON 타입으로 전달할 객체
 [Controlelr]
 - HTTP 요청에 따라 매핑을 진행
 [Service]
