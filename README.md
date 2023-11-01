@@ -142,8 +142,8 @@
 - Dto
   └─ request :사용자로 Body로 받을 객체
   └─ reponse : 사용자에게 JSON 타입으로 전달할 객체
-- Controlelr
-  └─ HTTP 요청에 따라 매핑을 진행
+- Controller
+  └─ HTTP 요청에 따른 처리를 분기
 - Service
   └─ Repository 객체를 생성해서 매개변수를 전달하여 데이터 처리를 진행할 Class
 - Entity - domain
