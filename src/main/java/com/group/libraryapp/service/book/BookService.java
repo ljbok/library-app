@@ -9,10 +9,12 @@ import com.group.libraryapp.domain.user.loanhistory.UserLoanHistoryRepository;
 import com.group.libraryapp.dto.book.request.BookCreateRequest;
 import com.group.libraryapp.dto.book.request.BookLoanRequest;
 import com.group.libraryapp.dto.book.request.BookReturnRequest;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
+@RequiredArgsConstructor
 public class BookService {
 
     private final BookRepository bookRepository;
@@ -22,6 +24,7 @@ public class BookService {
     // 4. 유저 정보를 가져오기를 위해 UserRepository 의존성 추가하기.
     private final UserRepository userRepository;
 
+    /*
     public BookService(
             BookRepository bookRepository,
             UserLoanHistoryRepository userLoanHistoryRepository,
@@ -31,6 +34,7 @@ public class BookService {
         this.userLoanHistoryRepository = userLoanHistoryRepository;
         this.userRepository = userRepository;
     }
+    */
 
     @Transactional
     public void saveBook(BookCreateRequest request) {

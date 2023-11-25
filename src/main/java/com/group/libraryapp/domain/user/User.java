@@ -1,12 +1,16 @@
 package com.group.libraryapp.domain.user;
 
 import com.group.libraryapp.domain.user.loanhistory.UserLoanHistory;
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 @Entity
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class User {
 
     @Id               // primary key 라는 것을 의미
@@ -20,7 +24,7 @@ public class User {
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<UserLoanHistory> userLoanHistories = new ArrayList<>();
 
-    protected User() {}
+    //protected User() {}
 
     public User(String name, Integer age) {
         if(name == null || name.isBlank()){
@@ -55,9 +59,9 @@ public class User {
     public void returnBook(String bookName) {
         UserLoanHistory targetHistory = this.userLoanHistories.stream()
                 .filter(history -> history.getBookName().equals(bookName))
+                .sorted(Comparator.comparing(UserLoanHistory::getId).reversed())
                 .findFirst()
                 .orElseThrow(IllegalArgumentException::new);
         targetHistory.doReturn();
-
     }
 }

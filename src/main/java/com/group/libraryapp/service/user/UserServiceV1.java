@@ -35,7 +35,7 @@ public class UserServiceV1 {
     }
 
     public void deleteUser(String name) {
-        if (userJdbcRepository.isUserNotExist(name)){
+        if (userJdbcRepository.isUserNotExist(name)) {
             throw new IllegalArgumentException();
         }
 
