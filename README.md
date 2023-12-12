@@ -3,7 +3,7 @@
 <br>
 
 ## domain
-- http://www.library-system.site:8090/v1/index.html
+- http://www.library-system.site:8090/v1/index.html --> 현재 (다른 어플리케이션 배포를 위해 폐기됨)
 
 ## 프로젝트 소개
 - 프로젝트 유형 : 개인 프로젝트, 참조 프로젝트, Back-End
@@ -29,8 +29,8 @@
 - **IDE** : 'IntelliJ(2023.2.3)1'
 - **Framework** : 'Spring Boot(2.7.6)'
 - **Database** : 'MySQL(8)'
-- **ORM** : 'Gradle'
-- **build tool** : 'Maven'
+- **ORM** : 'JPA'
+- **build tool** : 'Gradle'
 - **cloud & Web Hosting** : AWS, Gabia
 <br>
 
